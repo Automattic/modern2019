@@ -404,7 +404,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #111;
+  color: #181818;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 1em;
@@ -418,7 +418,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #111;
+  color: #181818;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1.8;
@@ -506,7 +506,7 @@ h1 {
 .error-404 .page-title,
 .has-larger-font-size,
 h2 {
-  font-size: 1.6875em;
+  font-size: 1.125em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -523,7 +523,7 @@ h2 {
 .has-large-font-size,
 .comments-title,
 h3 {
-  font-size: 1.6875em;
+  font-size: 22px;
 }
 
 .site-title,
@@ -563,7 +563,7 @@ h6 {
 
 .site-title,
 .page-title {
-  font-weight: normal;
+  font-weight: 700;
 }
 
 .page-description,
@@ -595,6 +595,12 @@ blockquote {
 p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+}
+
+b,
+strong {
+  font-weight: 700;
 }
 
 dfn,
@@ -741,11 +747,11 @@ html {
 }
 
 ::-moz-selection {
-  background-color: #bfdcea;
+  background-color: #f0cfdf;
 }
 
 ::selection {
-  background-color: #bfdcea;
+  background-color: #f0cfdf;
 }
 
 *,
@@ -786,18 +792,8 @@ h6 {
   margin: 1rem 0;
 }
 
-h1:not(.site-title):before,
-h2:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-}
-
 hr {
-  background-color: #767676;
+  background-color: #686868;
   border: 0;
   height: 2px;
 }
@@ -857,7 +853,7 @@ blockquote > p {
 }
 
 blockquote cite {
-  color: #767676;
+  color: #686868;
 }
 
 table {
@@ -870,7 +866,7 @@ table {
 table td,
 table th {
   padding: 0.5em;
-  border: 1px solid #767676;
+  border: 1px solid #686868;
   word-break: break-all;
 }
 
@@ -881,7 +877,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   transition: background 150ms ease-in-out;
-  background: #0073aa;
+  background: #c43d80;
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
@@ -1615,20 +1611,20 @@ body.page .main-navigation {
 .social-navigation ul.social-links-menu li a {
   border-bottom: 1px solid transparent;
   display: block;
-  color: #111;
+  color: #181818;
   margin-bottom: -1px;
   transition: opacity 110ms ease-in-out;
 }
 
 .social-navigation ul.social-links-menu li a:hover, .social-navigation ul.social-links-menu li a:active {
-  color: #111;
+  color: #181818;
   opacity: 0.6;
 }
 
 .social-navigation ul.social-links-menu li a:focus {
-  color: #111;
+  color: #181818;
   opacity: 1;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #181818;
 }
 
 .social-navigation ul.social-links-menu li a svg {
@@ -1712,7 +1708,7 @@ body.page .main-navigation {
 }
 
 .post-navigation .nav-links a .meta-nav {
-  color: #767676;
+  color: #686868;
   user-select: none;
 }
 
@@ -1720,7 +1716,7 @@ body.page .main-navigation {
   display: none;
   content: "—";
   width: 2em;
-  color: #767676;
+  color: #686868;
   height: 1em;
 }
 
@@ -1994,17 +1990,19 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   .site-header.featured-image {
     min-height: 100vh;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
 .site-branding {
-  color: #767676;
-  position: relative;
+  color: #686868;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2056,18 +2054,18 @@ body.page .main-navigation {
 }
 
 .site-title {
-  margin: auto;
-  display: inline;
-  color: #111;
+  color: #181818;
+  margin: 0.6rem 0 0;
+  order: 2;
   /* When there is no description set, make sure navigation appears below title. */
 }
 
 .site-title a {
-  color: #111;
+  color: #181818;
 }
 
 .site-title a:link, .site-title a:visited {
-  color: #111;
+  color: #181818;
 }
 
 .site-title a:hover {
@@ -2078,32 +2076,20 @@ body.page .main-navigation {
   margin: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .featured-image .site-title {
-    display: inline-block;
-  }
-}
-
 .site-title + .main-navigation {
   display: block;
 }
 
-@media only screen and (min-width: 768px) {
-  .site-title {
-    display: inline;
-  }
-}
-
 .site-title:not(:empty) + .site-description:not(:empty):before {
-  content: "\2014";
   margin: 0 .2em;
 }
 
 .site-description {
-  display: inline;
-  color: #767676;
-  font-weight: normal;
+  color: #181818;
+  font-size: 0.71111em;
+  font-weight: 300;
   margin: 0;
+  order: 1;
 }
 
 .site-header.featured-image {
@@ -2419,7 +2405,7 @@ body.page .main-navigation {
 }
 
 .sticky-post {
-  background: #0073aa;
+  background: #c43d80;
   color: #fff;
   display: inline-block;
   font-weight: bold;
@@ -2463,15 +2449,6 @@ body.page .main-navigation {
   margin: 0;
 }
 
-.entry .entry-title:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-}
-
 .entry .entry-title a {
   color: inherit;
 }
@@ -2482,7 +2459,7 @@ body.page .main-navigation {
 
 .entry .entry-meta,
 .entry .entry-footer {
-  color: #767676;
+  color: #686868;
   font-weight: 500;
 }
 
@@ -2527,7 +2504,7 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 768px) {
   .entry .entry-footer {
-    margin: 1rem calc(10% + 60px) calc(3 * 1rem);
+    margin: 1rem auto calc(3 * 1rem);
     max-width: calc(8 * (100vw / 12) - 28px);
   }
 }
@@ -2635,6 +2612,15 @@ body.page .main-navigation {
     margin: 0 10%;
     padding: 0 60px;
   }
+}
+
+.entry .entry-content {
+  display: block;
+}
+
+.entry .entry-content > *:first-child,
+.entry .entry-content > *.alignfull:first-child {
+  margin-top: 0;
 }
 
 .entry .entry-content p {
@@ -2747,18 +2733,9 @@ body.page .main-navigation {
   display: inline;
 }
 
-.author-bio .author-title:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-}
-
 .author-bio .author-description {
   display: inline;
-  color: #767676;
+  color: #686868;
   font-size: 1.125em;
   line-height: 1.2;
 }
@@ -2834,15 +2811,6 @@ body.page .main-navigation {
 
 .comments-area .comments-title-wrap .comments-title {
   margin: 0;
-}
-
-.comments-area .comments-title-wrap .comments-title:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2923,7 +2891,7 @@ body.page .main-navigation {
 
 .comment-list .pingback .comment-body,
 .comment-list .trackback .comment-body {
-  color: #767676;
+  color: #686868;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.71111em;
   font-weight: 500;
@@ -2942,7 +2910,7 @@ body.page .main-navigation {
 
 .comment-list .pingback .comment-body .comment-edit-link,
 .comment-list .trackback .comment-body .comment-edit-link {
-  color: #767676;
+  color: #686868;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
 }
@@ -3039,7 +3007,7 @@ body.page .main-navigation {
 .comment .comment-metadata .comment-edit-link {
   display: inline;
   font-weight: 500;
-  color: #767676;
+  color: #686868;
   vertical-align: baseline;
 }
 
@@ -3059,13 +3027,13 @@ body.page .main-navigation {
 }
 
 .comment .comment-metadata .edit-link-sep {
-  color: #767676;
+  color: #686868;
   margin: 0 0.2em;
   vertical-align: baseline;
 }
 
 .comment .comment-metadata .edit-link {
-  color: #767676;
+  color: #686868;
 }
 
 .comment .comment-metadata .edit-link svg {
@@ -3161,7 +3129,7 @@ body.page .main-navigation {
 .comment-form label {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.71111em;
-  color: #767676;
+  color: #686868;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3205,7 +3173,7 @@ body.page .main-navigation {
 .archive .page-header .page-title,
 .search .page-header .page-title,
 .error404 .page-header .page-title {
-  color: #767676;
+  color: #686868;
   display: inline;
   letter-spacing: normal;
 }
@@ -3234,12 +3202,12 @@ body.page .main-navigation {
 .error404 .page-header .page-description:after {
   content: ".";
   font-weight: bold;
-  color: #767676;
+  color: #686868;
 }
 
 .archive .page-header .page-description {
   display: block;
-  color: #111;
+  color: #181818;
   font-size: 1em;
 }
 
@@ -3285,7 +3253,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   #colophon .widget-area,
   #colophon .site-info {
-    margin: calc(3 * 1rem) calc(10% + 60px);
+    margin: calc(3 * 1rem) auto;
   }
 }
 
@@ -3306,7 +3274,20 @@ body.page .main-navigation {
 }
 
 #colophon .site-info {
-  color: #767676;
+  color: #686868;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+  #colophon .site-info {
+    max-width: calc(8 * (100vw / 12) - 28px);
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  #colophon .site-info {
+    max-width: calc(6 * (100vw / 12) - 28px);
+  }
 }
 
 #colophon .site-info a {
@@ -3361,7 +3342,7 @@ body.page .main-navigation {
 .widget_recent_comments ul li,
 .widget_recent_entries ul li,
 .widget_rss ul li {
-  color: #767676;
+  color: #686868;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: calc(22px * 1.125);
   font-weight: 700;
@@ -3432,7 +3413,7 @@ body.page .main-navigation {
 /* !Block styles */
 .entry .entry-content > *,
 .entry .entry-summary > * {
-  margin: 32px 0;
+  margin: 2em 0;
   max-width: 100%;
 }
 
@@ -3453,7 +3434,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .entry .entry-content > *,
   .entry .entry-summary > * {
-    margin: 32px 0;
+    margin: 2em auto;
   }
 }
 
@@ -3594,6 +3575,13 @@ body.page .main-navigation {
   }
 }
 
+.entry .entry-content h2 {
+  font-size: 1.125em;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
 .entry .entry-content p.has-background {
   padding: 20px 30px;
 }
@@ -3629,6 +3617,55 @@ body.page .main-navigation {
   width: 100%;
 }
 
+.entry .entry-content .wp-block-media-text {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .entry .entry-content .wp-block-media-text {
+    padding: 60px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .entry .entry-content .wp-block-media-text .wp-block-media-text__content {
+    padding: 0 60px;
+    width: 115%;
+  }
+  .entry .entry-content .wp-block-media-text .wp-block-media-text__media {
+    max-width: calc( 100%);
+  }
+}
+
+.entry .entry-content .wp-block-media-text:nth-child(odd) {
+  background-color: #181818;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .entry .entry-content .wp-block-media-text:nth-child(odd) .wp-block-media-text__media {
+    margin-right: -10%;
+    margin-left: 10%;
+  }
+  .entry .entry-content .wp-block-media-text:nth-child(odd) .wp-block-media-text__content {
+    margin-right: -15%;
+  }
+}
+
+.entry .entry-content .wp-block-media-text:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media only screen and (min-width: 768px) {
+  .entry .entry-content .wp-block-media-text:nth-child(even) .wp-block-media-text__media {
+    margin-left: -10%;
+    margin-right: 10%;
+  }
+  .entry .entry-content .wp-block-media-text:nth-child(even) .wp-block-media-text__content {
+    margin-left: -15%;
+  }
+}
+
 .entry .entry-content .wp-block-button .wp-block-button__link {
   transition: background 150ms ease-in-out;
   border: none;
@@ -3644,7 +3681,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
-  background-color: #0073aa;
+  background-color: #c43d80;
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-text-color) {
@@ -3685,7 +3722,7 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color),
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color) {
-  color: #0073aa;
+  color: #c43d80;
   border-color: currentColor;
 }
 
@@ -3708,7 +3745,7 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-archives li,
 .entry .entry-content .wp-block-categories li,
 .entry .entry-content .wp-block-latest-posts li {
-  color: #767676;
+  color: #686868;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: calc(22px * 1.125);
   font-weight: bold;
@@ -3800,7 +3837,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-pullquote blockquote {
-  color: #111;
+  color: #181818;
   border: none;
   margin-top: calc(4 * 1rem);
   margin-bottom: calc(4.33 * 1rem);
@@ -3831,7 +3868,7 @@ body.page .main-navigation {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
   text-transform: none;
-  color: #767676;
+  color: #686868;
   /*
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
@@ -4042,13 +4079,11 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-cover-image .wp-block-cover-image-text,
 .entry .entry-content .wp-block-cover-image .wp-block-cover-text,
-.entry .entry-content .wp-block-cover-image h2,
 .entry .entry-content .wp-block-cover .wp-block-cover-image-text,
-.entry .entry-content .wp-block-cover .wp-block-cover-text,
-.entry .entry-content .wp-block-cover h2 {
+.entry .entry-content .wp-block-cover .wp-block-cover-text {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.6875em;
-  font-weight: bold;
+  font-size: 2.25em;
+  font-weight: 200;
   line-height: 1.25;
   padding: 0;
   color: #fff;
@@ -4057,11 +4092,9 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-cover-image .wp-block-cover-image-text,
   .entry .entry-content .wp-block-cover-image .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover-image h2,
   .entry .entry-content .wp-block-cover .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover h2 {
-    font-size: 2.25em;
+  .entry .entry-content .wp-block-cover .wp-block-cover-text {
+    font-size: 2.8125em;
     max-width: 100%;
   }
 }
@@ -4080,26 +4113,15 @@ body.page .main-navigation {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover-image.alignfull h2,
-  .entry .entry-content .wp-block-cover.alignfull .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover.alignfull .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover.alignfull h2 {
-    max-width: calc(8 * (100vw / 12) - 28px);
-  }
-}
-
-@media only screen and (min-width: 1168px) {
-  .entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover-image.alignfull h2,
-  .entry .entry-content .wp-block-cover.alignfull .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover.alignfull .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover.alignfull h2 {
-    max-width: calc(6 * (100vw / 12) - 28px);
-  }
+.entry .entry-content .wp-block-cover-image.alignfull,
+.entry .entry-content .wp-block-cover.alignfull {
+  /*
+			.wp-block-cover-image-text,
+			.wp-block-cover-text,
+			h2 {
+				@include postContentMaxWidth();
+			}
+			*/
 }
 
 @media only screen and (min-width: 768px) {
@@ -4147,12 +4169,11 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-separator,
 .entry .entry-content hr {
-  background-color: #767676;
+  background-color: #686868;
   border: 0;
-  height: 2px;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  max-width: 2.25em;
+  height: 1px;
+  margin: 2rem auto;
+  max-width: 5em;
   text-align: right;
   /* Remove duplicate rule-line when a separator
 		 * is followed by an H1, or H2 */
@@ -4202,7 +4223,7 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-separator.is-style-dots:before,
 .entry .entry-content hr.is-style-dots:before {
-  color: #767676;
+  color: #686868;
   font-size: 1.6875em;
   letter-spacing: 0.88889em;
   padding-right: 0.88889em;
@@ -4221,7 +4242,7 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-table th,
 .entry .entry-content .wp-block-table td {
-  border-color: #767676;
+  border-color: #686868;
 }
 
 .entry .entry-content .wp-block-file {
@@ -4233,7 +4254,7 @@ body.page .main-navigation {
   transition: background 150ms ease-in-out;
   border: none;
   border-radius: 5px;
-  background: #0073aa;
+  background: #c43d80;
   font-size: 22px;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.2;
@@ -4382,7 +4403,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .has-white-background-color {
-  color: #111;
+  color: #181818;
 }
 
 .entry .entry-content .has-white-background-color p,
@@ -4393,7 +4414,7 @@ body.page .main-navigation {
 .entry .entry-content .has-white-background-color h5,
 .entry .entry-content .has-white-background-color h6,
 .entry .entry-content .has-white-background-color a {
-  color: #111;
+  color: #181818;
 }
 
 .entry .entry-content .has-primary-background-color,
@@ -4408,12 +4429,12 @@ body.page .main-navigation {
 
 .entry .entry-content .has-dark-gray-background-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color.has-dark-gray-background-color {
-  background-color: #111;
+  background-color: #181818;
 }
 
 .entry .entry-content .has-light-gray-background-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color.has-light-gray-background-color {
-  background-color: #767676;
+  background-color: #686868;
 }
 
 .entry .entry-content .has-white-background-color,
@@ -4436,13 +4457,13 @@ body.page .main-navigation {
 .entry .entry-content .has-dark-gray-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color p {
-  color: #111;
+  color: #181818;
 }
 
 .entry .entry-content .has-light-gray-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color p {
-  color: #767676;
+  color: #686868;
 }
 
 .entry .entry-content .has-white-color,
@@ -4511,7 +4532,7 @@ svg {
 }
 
 .wp-caption-text {
-  color: #767676;
+  color: #686868;
   font-size: 0.71111em;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;

@@ -53,9 +53,7 @@ h6 {
 }
 
 h1:not(.site-title),
-h2 {
-	@include post-section-dash;
-}
+h2 {}
 
 hr {
 	background-color: $color__text-light;

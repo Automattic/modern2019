@@ -44,7 +44,6 @@
 
 	.entry-title {
 
-		@include post-section-dash;
 		margin: 0;
 
 		a {
@@ -100,7 +99,7 @@
 		margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
 
 		@include media(tablet) {
-			margin: $size__spacing-unit $size__site-margins calc(3 * #{$size__spacing-unit});
+			margin: $size__spacing-unit auto calc(3 * #{$size__spacing-unit});
 			max-width: $size__site-tablet-content;
 		}
 
@@ -188,6 +187,12 @@
 	}
 
 	.entry-content {
+		display: block;
+
+		> *:first-child,
+		> *.alignfull:first-child {
+			margin-top: 0;
+		}
 
 		p {
 			word-wrap: break-word;
@@ -281,7 +286,6 @@
 	}
 
 	.author-title {
-		@include post-section-dash;
 		display: inline;
 	}
 

@@ -16,11 +16,11 @@
 
 	@include media(tablet) {
 		margin: 0;
-		padding: 3rem 0;
+		padding: 2rem 0;
 
 		&.featured-image {
 			min-height: 100vh;
-			margin-bottom: 3rem;
+			margin-bottom: 2rem;
 		}
 	}
 }
@@ -30,7 +30,9 @@
 .site-branding {
 
 	color: $color__text-light;
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 
 	@include media(tablet) {
 		margin: 0 $size__site-margins;
@@ -83,9 +85,9 @@
 // Site title
 
 .site-title {
-	margin: auto;
-	display: inline;
 	color: $color__text-main;
+	margin: 0.6rem 0 0;
+	order: 2;
 
 	a {
 		color: $color__text-main;
@@ -103,9 +105,7 @@
 	.featured-image & {
 		margin: 0;
 
-		@include media(tablet) {
-			display: inline-block;
-		}
+		@include media(tablet) {}
 	}
 
 	/* When there is no description set, make sure navigation appears below title. */
@@ -113,12 +113,9 @@
 		display: block;
 	}
 
-	@include media(tablet) {
-		display: inline;
-	}
+	@include media(tablet) {}
 
 	&:not(:empty) + .site-description:not(:empty):before {
-		content: "\2014";
 		margin: 0 .2em;
 	}
 }
@@ -126,9 +123,9 @@
 // Site description
 
 .site-description {
-
-	display: inline;
-	color: $color__text-light;
-	font-weight: normal;
+	color: $color__text-main;
+	font-size: $font__size-xs;
+	font-weight: 300;
 	margin: 0;
+	order: 1;
 }

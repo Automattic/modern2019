@@ -77,7 +77,7 @@ h1 {
 .error-404 .page-title,
 .has-larger-font-size,
 h2 {
-	font-size: $font__size-lg;
+	font-size: $font__size-md;
 
 	@include media(tablet) {
 		font-size: $font__size-xl;
@@ -88,7 +88,7 @@ h2 {
 .has-large-font-size,
 .comments-title,
 h3 {
-	font-size: $font__size-lg;
+	font-size: $font__size-base;
 }
 
 .site-title,
@@ -128,7 +128,7 @@ h6 {
 
 .site-title,
 .page-title {
-	font-weight: normal;
+	font-weight: 700;
 }
 
 .page-description,

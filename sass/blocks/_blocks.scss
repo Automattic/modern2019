@@ -2,13 +2,13 @@
 
 .entry .entry-content > *,
 .entry .entry-summary > * {
-	margin: 32px 0;
+	margin: 2em 0;
 	max-width: 100%;
 
 	@include postContentMaxWidth();
 
 	@include media(tablet) {
-		margin: 32px 0;
+		margin: 2em auto;
 	}
 
 	> *:first-child {
@@ -116,6 +116,14 @@
 
 .entry .entry-content {
 
+	//! Header
+	h2 {
+		font-size: $font__size-md;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
 	//! Paragraphs
 	p.has-background {
 		padding: 20px 30px;
@@ -152,6 +160,58 @@
 			width: 100%;
 		}
 	}
+
+	.wp-block-media-text {
+		margin: 0;
+
+		@include media(tablet) {
+			padding: 60px 0;
+		}
+
+		@include media(tablet) {
+			.wp-block-media-text__content {
+				padding: 0 60px;
+				/* width: 125%; */
+			}
+
+			.wp-block-media-text__media {
+				max-width: calc( 100% );
+			}
+		}
+
+		&:nth-child(odd) {
+			background-color: $color__background-media-text;
+			color: $color__text-media;
+
+			@include media(tablet) {
+				.wp-block-media-text__media {
+					margin-left: -10%;
+					margin-right: 10%;
+				}
+
+				.wp-block-media-text__content {
+					/* margin-left: -25%; */
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			background-color: $color__background-media-text-alt;
+
+			@include media(tablet) {
+				.wp-block-media-text__media {
+					margin-right: -10%;
+					margin-left: 10%;
+				}
+
+				.wp-block-media-text__content {
+					/* margin-right: -25%; */
+				}
+			}
+		}
+	}
+
+
 
 	//! Button
 	.wp-block-button {
@@ -549,7 +609,7 @@
 	.wp-block-cover-image,
 	.wp-block-cover {
 		position: relative;
-		min-height: 430px;
+		min-height: 640px;
 		padding: $size__spacing-unit;
 
 		@include media(tablet) {
@@ -557,17 +617,16 @@
 		}
 
 		.wp-block-cover-image-text,
-		.wp-block-cover-text,
-		h2 {
+		.wp-block-cover-text {
 			font-family: $font__heading;
-			font-size: $font__size-lg;
-			font-weight: bold;
+			font-size: $font__size-xl;
+			font-weight: 200;
 			line-height: 1.25;
 			padding: 0;
 			color: #fff;
 
 			@include media(tablet) {
-				font-size: $font__size-xl;
+				font-size: $font__size-xxl;
 				max-width: 100%;
 			}
 		}
@@ -583,11 +642,13 @@
 
 		&.alignfull {
 
+			/*
 			.wp-block-cover-image-text,
 			.wp-block-cover-text,
 			h2 {
 				@include postContentMaxWidth();
 			}
+			*/
 
 			@include media(tablet) {
 				padding-left: calc(10% + 58px + (2 * #{$size__spacing-unit}));
@@ -636,10 +697,9 @@
 	hr {
 		background-color: $color__text-light;
 		border: 0;
-		height: 2px;
-		margin-bottom: (2 * $size__spacing-unit);
-		margin-top: (2 * $size__spacing-unit);
-		max-width: 2.25em;
+		height: 1px;
+		margin: (2 * $size__spacing-unit) auto;
+		max-width: 5em;
 		text-align: left;
 
 		&.is-style-wide {

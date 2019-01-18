@@ -7,7 +7,7 @@
 		margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit;
 
 		@include media(tablet) {
-			margin: calc(3 * #{$size__spacing-unit}) $size__site-margins;
+			margin: calc(3 * #{$size__spacing-unit}) auto;
 		}
 	}
 
@@ -25,6 +25,9 @@
 
 	.site-info {
 		color: $color__text-light;
+		font-weight: 300;
+
+		@include postContentMaxWidth();
 
 		a {
 			color: inherit;
