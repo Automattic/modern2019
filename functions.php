@@ -62,3 +62,8 @@ function modern2019_block_editor_scripts() {
 	// wp_enqueue_script( 'modern2019-block-editor-filters', get_theme_file_uri( '/js/block-editor-filters.js' ), array(), '1.0', true );
 }
 add_action( 'enqueue_block_editor_assets', 'modern2019_block_editor_scripts' );
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_stylesheet_directory() . '/inc/jetpack.php';
