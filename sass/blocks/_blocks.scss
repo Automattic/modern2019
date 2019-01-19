@@ -171,7 +171,6 @@
 		@include media(tablet) {
 			.wp-block-media-text__content {
 				padding: 0 60px;
-				/* width: 125%; */
 			}
 
 			.wp-block-media-text__media {
@@ -185,12 +184,12 @@
 
 			@include media(tablet) {
 				.wp-block-media-text__media {
-					margin-left: -10%;
-					margin-right: 10%;
+					margin-left: -60px;
+					margin-right: 60px;
 				}
 
 				.wp-block-media-text__content {
-					/* margin-left: -25%; */
+					padding-left: 0;
 				}
 			}
 		}
@@ -200,12 +199,12 @@
 
 			@include media(tablet) {
 				.wp-block-media-text__media {
-					margin-right: -10%;
-					margin-left: 10%;
+					margin-right: -60px;
+					margin-left: 60px;
 				}
 
 				.wp-block-media-text__content {
-					/* margin-right: -25%; */
+					padding-right: 0;
 				}
 			}
 		}

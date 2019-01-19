@@ -3630,7 +3630,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-media-text .wp-block-media-text__content {
     padding: 0 60px;
-    width: 115%;
+    /* width: 125%; */
   }
   .entry .entry-content .wp-block-media-text .wp-block-media-text__media {
     max-width: calc( 100%);
@@ -3644,11 +3644,12 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-media-text:nth-child(odd) .wp-block-media-text__media {
-    margin-right: -10%;
-    margin-left: 10%;
+    margin-right: -60px;
+    margin-left: 60px;
   }
   .entry .entry-content .wp-block-media-text:nth-child(odd) .wp-block-media-text__content {
-    margin-right: -15%;
+    padding-right: 0;
+    /* margin-left: -25%; */
   }
 }
 
@@ -3658,11 +3659,12 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-media-text:nth-child(even) .wp-block-media-text__media {
-    margin-left: -10%;
-    margin-right: 10%;
+    margin-left: -60px;
+    margin-right: 60px;
   }
   .entry .entry-content .wp-block-media-text:nth-child(even) .wp-block-media-text__content {
-    margin-left: -15%;
+    padding-left: 0;
+    /* margin-right: -25%; */
   }
 }
 
