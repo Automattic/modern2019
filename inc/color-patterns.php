@@ -1,6 +1,6 @@
 <?php
 /**
- * Modern (Modern (Twenty Nineteen)): Color Patterns
+ * Modern (Twenty Nineteen): Color Patterns
  *
  * @package WordPress
  * @subpackage modern2019

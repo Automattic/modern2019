@@ -1,5 +1,5 @@
 /*!
-Twenty Nineteen Editor Styles
+Modern (Twenty Nineteen) Editor Styles
 */
 
 /** === Includes === */
@@ -59,7 +59,7 @@ body {
 .wp-block {
 	width: calc(100vw - (2 * #{$size__spacing-unit}));
 	max-width: 100%;
-
+/*
 	@include media(tablet) {
 		width: calc(8 * (100vw / 12));
 	}
@@ -67,7 +67,7 @@ body {
 	@include media(desktop) {
 		width: calc(6 * (100vw / 12 ));
 	}
-
+*/
 	// Only the top level blocks need specific widths, therefore override for every nested block.
 	.wp-block {
 		width: 100%;
@@ -106,15 +106,16 @@ h1 {
 }
 
 h2 {
-	font-size: $font__size-lg;
+	font-size: $font__size-base;
+	text-align: center;
 
 	@include media(tablet) {
-		font-size: $font__size-xl;
+		font-size: $font__size-md;
 	}
 }
 
 h3 {
-	font-size: $font__size-lg;
+	font-size: $font__size-base;
 }
 
 h4 {
@@ -209,7 +210,8 @@ figcaption,
 	.editor-post-title__input {
 		font-family: $font__heading;
 		font-size: $font__size-xxl;
-		font-weight: 700;
+		font-weight: 200;
+		text-align: center;
 	}
 }
 
@@ -227,6 +229,7 @@ figcaption,
 		font-weight: bolder;
 	}
 }
+
 /** === Paragraph === */
 
 .wp-block-paragraph {
@@ -249,12 +252,13 @@ figcaption,
 /** === Cover === */
 
 .wp-block-cover {
+	min-height: 640px;
 
 	h2,
 	.wp-block-cover-text {
 		font-family: $font__heading;
 		font-size: $font__size-lg;
-		font-weight: bold;
+		font-weight: 200;
 		line-height: 1.4;
 		padding-left: $size__spacing-unit;
 		padding-right: $size__spacing-unit;
@@ -334,6 +338,64 @@ figcaption,
 		}
 	}
 }
+
+/* Media Text */
+.wp-block[data-type="core/media-text"] {
+	&:nth-child(odd) {
+		background-color: $color__background-media-text;
+		color: $color__text-media;
+
+		@include media(tablet) {
+			.block-library-media-text__media-container {
+				margin-left: -60px;
+				margin-right: 60px;
+			}
+
+			.editor-inner-blocks {
+				padding-left: 0;
+			}
+		}
+	}
+
+	&:nth-child(even) {
+		background-color: $color__background-media-text-alt;
+
+		@include media(tablet) {
+			.block-library-media-text__media-container {
+				margin-right: -60px;
+				margin-left: 60px;
+			}
+
+			.editor-inner-blocks {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+.wp-block-media-text {
+	margin: 0;
+
+	@include media(tablet) {
+		padding: 60px 0;
+	}
+
+	@include media(tablet) {
+		.wp-block-media-text__content {
+			padding: 0 60px;
+		}
+
+		.wp-block-media-text__media {
+			max-width: calc( 100% );
+		}
+	}
+
+	a,
+	a:hover {
+		color: inherit;
+	}
+}
+
 
 /** === Gallery === */
 
@@ -582,6 +644,8 @@ figcaption,
 /** === Separator === */
 
 .wp-block-separator {
+	margin-left: auto;
+	margin-right: auto;
 
 	&:not(.is-style-dots) {
 		border-bottom: 2px solid $color__text-light;
@@ -589,7 +653,6 @@ figcaption,
 
 	&:not(.is-style-wide):not(.is-style-dots) {
 		width: $font__size-xl;
-		margin-left: 0;
 	}
 
 	&.is-style-dots:before {
