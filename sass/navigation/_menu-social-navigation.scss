@@ -1,8 +1,8 @@
 /* Social menu */
 
 .social-navigation {
-	margin-top: calc(#{$size__spacing-unit} / 2 );
-	text-align: left;
+	margin-top: #{0.6 * $size__spacing-unit};
+	order: 4;
 
 	ul.social-links-menu {
 		@include clearfix;

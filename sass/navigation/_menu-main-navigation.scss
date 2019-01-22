@@ -1,9 +1,9 @@
 /** === Main menu === */
 
 .main-navigation {
-
 	display: block;
-	margin-top: #{0.25 * $size__spacing-unit};
+	margin-top: #{0.6 * $size__spacing-unit};
+	order: 3;
 
 	body.page & {
 		display: block;
@@ -158,10 +158,10 @@
 		}
 
 		> li {
-
 			display: block;
 			float: none;
 			position: relative;
+			text-align: left;
 
 			&.menu-item-has-children {
 

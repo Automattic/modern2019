@@ -119,6 +119,7 @@
 	//! Header
 	h2 {
 		font-size: $font__size-md;
+		font-weight: 700;
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
@@ -207,6 +208,11 @@
 					padding-right: 0;
 				}
 			}
+		}
+
+		a,
+		a:hover {
+			color: inherit;
 		}
 	}
 

@@ -78,6 +78,7 @@ h1 {
 .has-larger-font-size,
 h2 {
 	font-size: $font__size-md;
+	font-weight: 200;
 
 	@include media(tablet) {
 		font-size: $font__size-xl;
@@ -127,9 +128,7 @@ h6 {
 }
 
 .site-title,
-.page-title {
-	font-weight: 700;
-}
+.page-title {}
 
 .page-description,
 .page-links a {
