@@ -22,6 +22,8 @@ function modern2019_setup() {
 }
 endif; // modern2019_setup
 add_action( 'after_setup_theme', 'modern2019_setup' );
+
+
 function modern2019_fonts_url() {
 	$fonts_url = '';
 	/* Translators: If there are characters in your language that are not
@@ -42,6 +44,7 @@ function modern2019_fonts_url() {
 	}
 	return esc_url_raw( $fonts_url );
 }
+
 /**
  * Enqueue scripts and styles.
  */
@@ -52,16 +55,7 @@ function modern2019_scripts() {
 	wp_enqueue_style( 'modern2019-fonts', modern2019_fonts_url(), array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'modern2019_scripts' );
-/**
- * Enqueue supplemental block editor scripts.
- */
-function modern2019_block_editor_scripts() {
-	/**
-	 * Block Editor Scripts
-	 */
-	// wp_enqueue_script( 'modern2019-block-editor-filters', get_theme_file_uri( '/js/block-editor-filters.js' ), array(), '1.0', true );
-}
-add_action( 'enqueue_block_editor_assets', 'modern2019_block_editor_scripts' );
+add_action( 'enqueue_block_editor_assets', 'modern2019_scripts' );
 
 /**
  * Load Jetpack compatibility file.
