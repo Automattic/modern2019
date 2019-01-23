@@ -61,3 +61,8 @@ add_action( 'enqueue_block_editor_assets', 'modern2019_scripts' );
  * Load Jetpack compatibility file.
  */
 require get_stylesheet_directory() . '/inc/jetpack.php';
+
+/**
+ * Load WP.com compatibility file.
+ */
+require get_stylesheet_directory() . '/inc/wpcom.php';
