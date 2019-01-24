@@ -46,7 +46,6 @@ h4,
 h5,
 h6 {
 	font-weight: 700;
-	letter-spacing: -0.02em;
 	line-height: $font__line-height-heading;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -127,16 +126,9 @@ h6 {
 	font-size: $font__size-xs;
 }
 
-.site-title,
-.page-title {}
-
 .page-description,
 .page-links a {
 	font-weight: bold;
-}
-
-.site-description {
-	letter-spacing: -0.01em;
 }
 
 .post-navigation .post-title,

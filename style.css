@@ -473,7 +473,6 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  letter-spacing: -0.02em;
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -565,10 +564,6 @@ h6 {
 .page-description,
 .page-links a {
   font-weight: bold;
-}
-
-.site-description {
-  letter-spacing: -0.01em;
 }
 
 .post-navigation .post-title,
@@ -4236,7 +4231,6 @@ body.page .main-navigation {
 .entry .entry-content hr.is-style-dots:before {
   color: #686868;
   font-size: 1.6875em;
-  letter-spacing: 0.88889em;
   padding-left: 0.88889em;
 }
 
