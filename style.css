@@ -2012,12 +2012,13 @@ body.page .main-navigation {
 
 .site-logo {
   margin-bottom: calc(0.6 * 1rem);
+  order: 2;
   text-align: center;
 }
 
 .site-logo .custom-logo-link {
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
 }
 
@@ -2027,8 +2028,8 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 768px) {
   .site-logo .custom-logo-link {
-    width: 96px;
-    height: 96px;
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -2067,7 +2068,7 @@ body.page .main-navigation {
   color: #181818;
   font-size: 0.71111em;
   font-weight: 300;
-  margin: 0;
+  margin: 0 0 calc(0.6 * 1rem);
   order: 1;
 }
 
