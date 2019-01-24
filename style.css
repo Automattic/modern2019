@@ -3408,7 +3408,7 @@ body.page .main-navigation {
 /* !Block styles */
 .entry .entry-content > *,
 .entry .entry-summary > * {
-  margin: 2em 0;
+  margin: 32px 0;
   max-width: 100%;
 }
 
@@ -3429,7 +3429,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .entry .entry-content > *,
   .entry .entry-summary > * {
-    margin: 2em auto;
+    margin: 32px auto;
   }
 }
 
