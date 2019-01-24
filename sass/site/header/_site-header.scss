@@ -47,25 +47,16 @@
 	text-align: center;
 
 	.custom-logo-link {
-		box-sizing: content-box;
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 		width: 64px;
 		height: 64px;
 		overflow: hidden;
-		transition: box-shadow $background_transition ease-in-out;
 
 		.custom-logo {
 			min-height: inherit;
 		}
 
-		&:hover,
-		&:active,
-		&:focus {
-			box-shadow: 0 0 0 2px rgba(0, 0, 0, 1);
-		}
-
 		@include media(tablet) {
-			width: 96x;
+			width: 96px;
 			height: 96px;
 		}
 	}

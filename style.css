@@ -2016,25 +2016,18 @@ body.page .main-navigation {
 }
 
 .site-logo .custom-logo-link {
-  box-sizing: content-box;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   width: 64px;
   height: 64px;
   overflow: hidden;
-  transition: box-shadow 200ms ease-in-out;
 }
 
 .site-logo .custom-logo-link .custom-logo {
   min-height: inherit;
 }
 
-.site-logo .custom-logo-link:hover, .site-logo .custom-logo-link:active, .site-logo .custom-logo-link:focus {
-  box-shadow: 0 0 0 2px black;
-}
-
 @media only screen and (min-width: 768px) {
   .site-logo .custom-logo-link {
-    width: 96x;
+    width: 96px;
     height: 96px;
   }
 }
@@ -2088,7 +2081,6 @@ body.page .main-navigation {
   /* Set white text color when featured image is set. */
   /* add focus state to social media icons */
   /* Entry header */
-  /* Custom Logo Link */
   /* Make sure important elements are above pseudo elements used for effects. */
   /* Set up image filter layer positioning */
   /* Background & Effects */
@@ -2279,15 +2271,6 @@ body.page .main-navigation {
     position: absolute;
     bottom: 100%;
   }
-}
-
-.site-header.featured-image .custom-logo-link {
-  background: #fff;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-}
-
-.site-header.featured-image .custom-logo-link:hover, .site-header.featured-image .custom-logo-link:active, .site-header.featured-image .custom-logo-link:focus {
-  box-shadow: 0 0 0 2px white;
 }
 
 .site-header.featured-image .site-branding {
