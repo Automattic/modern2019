@@ -8,20 +8,32 @@
  */
 
 if ( ! function_exists( 'modern2019_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function modern2019_setup() {
-	/*
-	 * Probably not necessary
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-}
+	function modern2019_setup() {
+	    /**
+	     * Add support for core custom logo.
+	     *
+	     * @link https://codex.wordpress.org/Theme_Logo
+	     */
+	    add_theme_support(
+	        'custom-logo',
+	        array(
+	            'height'      => 120,
+	            'width'       => 240,
+	            'flex-width'  => true,
+	            'flex-height' => false,
+	            'header-text' => array( 'site-title' ),
+	        )
+	    );
+	}
 endif; // modern2019_setup
-add_action( 'after_setup_theme', 'modern2019_setup' );
+add_action( 'after_setup_theme', 'modern2019_setup', 30 );
 
 
 function modern2019_fonts_url() {
@@ -58,11 +70,16 @@ add_action( 'wp_enqueue_scripts', 'modern2019_scripts' );
 add_action( 'enqueue_block_editor_assets', 'modern2019_scripts' );
 
 /**
- * Load Jetpack compatibility file.
+ * Customizer additions
+ */
+require get_stylesheet_directory() . '/inc/customizer.php';
+
+/**
+ * Jetpack compatibility file.
  */
 require get_stylesheet_directory() . '/inc/jetpack.php';
 
 /**
- * Load WP.com compatibility file.
+ * WP.com compatibility file.
  */
 require get_stylesheet_directory() . '/inc/wpcom.php';
