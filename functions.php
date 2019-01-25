@@ -24,8 +24,8 @@ if ( ! function_exists( 'modern2019_setup' ) ) :
 	    add_theme_support(
 	        'custom-logo',
 	        array(
-	            'height'      => 120,
-	            'width'       => 240,
+	            'height'      => 128,
+	            'width'       => 128,
 	            'flex-width'  => true,
 	            'flex-height' => false,
 	            'header-text' => array( 'site-title' ),
