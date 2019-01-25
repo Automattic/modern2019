@@ -116,13 +116,20 @@
 
 .entry .entry-content {
 
-	//! Header
-	h2 {
+	//! Headers
+	& > h1,
+	& > h2,
+	& > h3,
+	& > h4,
+	& > h5,
+	& > h6 {
+		margin: 2rem auto;
+		text-align: center;
+	}
+
+	& > h2 {
 		font-size: $font__size-md;
 		font-weight: 700;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
 	}
 
 	//! Paragraphs
@@ -614,10 +621,11 @@
 	.wp-block-cover-image,
 	.wp-block-cover {
 		position: relative;
-		min-height: 640px;
+		min-height: 510px;
 		padding: $size__spacing-unit;
 
 		@include media(tablet) {
+			min-height: 640px;
 			padding: $size__spacing-unit 10%;
 		}
 

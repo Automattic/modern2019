@@ -528,7 +528,6 @@ h3 {
 
 .site-title,
 .site-description,
-.main-navigation,
 .nav-links,
 .page-title,
 .page-description,
@@ -1005,6 +1004,7 @@ a:focus {
 /** === Main menu === */
 .main-navigation {
   display: block;
+  font-size: 0.88889em;
   margin-top: 0.6rem;
   order: 3;
   /* Un-style buttons */
@@ -3560,12 +3560,19 @@ body.page .main-navigation {
   }
 }
 
-.entry .entry-content h2 {
+.entry .entry-content > h1,
+.entry .entry-content > h2,
+.entry .entry-content > h3,
+.entry .entry-content > h4,
+.entry .entry-content > h5,
+.entry .entry-content > h6 {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.entry .entry-content > h2 {
   font-size: 1.125em;
   font-weight: 700;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
 .entry .entry-content p.has-background {
@@ -4056,13 +4063,14 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-cover-image,
 .entry .entry-content .wp-block-cover {
   position: relative;
-  min-height: 640px;
+  min-height: 510px;
   padding: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
   .entry .entry-content .wp-block-cover-image,
   .entry .entry-content .wp-block-cover {
+    min-height: 640px;
     padding: 1rem 10%;
   }
 }

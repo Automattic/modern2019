@@ -10,6 +10,7 @@
 .site-main #infinite-handle span button,
 .site-main #infinite-handle span button:hover,
 .site-main #infinite-handle span button:focus {
+	background: $color__background-button;
 	font-family: $font__body;
 }
 
@@ -18,20 +19,23 @@
  */
 
 /**
- * Sharing
+ * Sharing & Related Posts
  */
-
 .entry div.sharedaddy h3.sd-title,
-.entry h3.sd-title {
+.entry h3.sd-title,
+.entry #jp-relatedposts h3.jp-relatedposts-headline {
+	display: block;
+	float: none;
 	font-family: $font__heading;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
-/**
- * Related Posts
- */
-
-.entry #jp-relatedposts h3.jp-relatedposts-headline {
-	font-family: $font__heading;
+.entry div.sharedaddy h3.sd-title::before,
+.entry #jp-relatedposts h3.jp-relatedposts-headline::before {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title,
