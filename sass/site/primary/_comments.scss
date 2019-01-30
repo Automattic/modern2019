@@ -11,7 +11,7 @@
 	@include postContentMaxWidth();
 
 	@include media(tablet) {
-		margin: calc(3 * #{$size__spacing-unit}) $size__site-margins;
+		margin: calc(3 * #{$size__spacing-unit}) auto;
 	}
 
 	& > * {

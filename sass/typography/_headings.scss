@@ -78,6 +78,7 @@ h1 {
 h2 {
 	font-size: $font__size-md;
 	font-weight: 200;
+	text-align: center;
 
 	@include media(tablet) {
 		font-size: $font__size-xl;

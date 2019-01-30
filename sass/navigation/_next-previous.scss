@@ -28,7 +28,7 @@
 
 		@include media(desktop) {
 			flex-direction: row;
-			margin: 0 $size__site-margins;
+			margin: 0 auto;
 			max-width: $size__site-desktop-content;
 		}
 

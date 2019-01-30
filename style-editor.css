@@ -143,6 +143,11 @@ a:focus {
   text-decoration: underline;
 }
 
+/* This fixes the freeform/classic block links, but breaks custom colored links
+.wp-block-freeform.block-library-rich-text__tinymce a {
+	color: $color__link;
+}
+*/
 .has-primary-background-color,
 .has-secondary-background-color,
 .has-dark-gray-background-color,

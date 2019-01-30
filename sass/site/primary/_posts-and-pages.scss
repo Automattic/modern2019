@@ -101,9 +101,10 @@
 		@include media(tablet) {
 			margin: $size__spacing-unit auto calc(3 * #{$size__spacing-unit});
 			max-width: $size__site-tablet-content;
+			text-align: center;
 		}
 
-		@include media(tablet) {
+		@include media(desktop) {
 			max-width: $size__site-desktop-content;
 		}
 	}
