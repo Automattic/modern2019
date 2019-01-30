@@ -2472,10 +2472,11 @@ body.page .main-navigation {
   .entry .entry-footer {
     margin: 1rem auto calc(3 * 1rem);
     max-width: calc(8 * (100vw / 12) - 28px);
+    text-align: center;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1168px) {
   .entry .entry-footer {
     max-width: calc(6 * (100vw / 12) - 28px);
   }

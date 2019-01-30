@@ -351,27 +351,18 @@ figcaption,
   color: #fff;
 }
 
-@media only screen and (min-width: 768px) {
-  .wp-block[data-type="core/media-text"]:nth-child(odd) .block-library-media-text__media-container {
-    margin-left: -60px;
-    margin-right: 60px;
-  }
-  .wp-block[data-type="core/media-text"]:nth-child(odd) .editor-inner-blocks {
-    padding-left: 0;
-  }
-}
-
 .wp-block[data-type="core/media-text"]:nth-child(even) {
   background-color: #f2f2f2;
 }
 
 @media only screen and (min-width: 768px) {
-  .wp-block[data-type="core/media-text"]:nth-child(even) .block-library-media-text__media-container {
-    margin-right: -60px;
-    margin-left: 60px;
+  .wp-block[data-type="core/media-text"][data-align="full"] {
+    margin-left: 0;
+    max-width: 125%;
   }
-  .wp-block[data-type="core/media-text"]:nth-child(even) .editor-inner-blocks {
-    padding-right: 0;
+  .wp-block[data-type="core/media-text"][data-align="full"] .has-media-on-the-right {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -383,15 +374,29 @@ figcaption,
   .wp-block-media-text {
     padding: 60px 0;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .wp-block-media-text .wp-block-media-text__content {
-    padding: 0 60px;
-  }
-  .wp-block-media-text .wp-block-media-text__media {
+  .wp-block-media-text .block-library-media-text__media-container {
+    margin-left: -60px;
+    margin-right: 60px;
     max-width: calc( 100%);
   }
+  .wp-block-media-text .editor-inner-blocks {
+    padding: 0 60px;
+  }
+  .wp-block-media-text.has-media-on-the-right .block-library-media-text__media-container {
+    margin-right: -60px;
+    margin-left: 60px;
+  }
+  .wp-block-media-text.has-media-on-the-right .editor-inner-blocks {
+    padding-right: 0;
+  }
+}
+
+.wp-block-media-text p:first-child {
+  margin-top: 0;
+}
+
+.wp-block-media-text p:last-child {
+  margin-bottom: 0;
 }
 
 .wp-block-media-text a,

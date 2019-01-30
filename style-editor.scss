@@ -350,33 +350,24 @@ figcaption,
 	&:nth-child(odd) {
 		background-color: $color__background-media-text;
 		color: $color__text-media;
-
-		@include media(tablet) {
-			.block-library-media-text__media-container {
-				margin-left: -60px;
-				margin-right: 60px;
-			}
-
-			.editor-inner-blocks {
-				padding-left: 0;
-			}
-		}
 	}
 
 	&:nth-child(even) {
 		background-color: $color__background-media-text-alt;
+	}
 
-		@include media(tablet) {
-			.block-library-media-text__media-container {
-				margin-right: -60px;
-				margin-left: 60px;
-			}
+	@include media(tablet) {
+		&[data-align="full"] {
+			margin-left: 0;
+			max-width: 125%;
+		}
 
-			.editor-inner-blocks {
-				padding-right: 0;
-			}
+		&[data-align="full"] .has-media-on-the-right {
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
+
 }
 
 .wp-block-media-text {
@@ -384,16 +375,34 @@ figcaption,
 
 	@include media(tablet) {
 		padding: 60px 0;
-	}
 
-	@include media(tablet) {
-		.wp-block-media-text__content {
+		.block-library-media-text__media-container {
+			margin-left: -60px;
+			margin-right: 60px;
+			max-width: calc( 100% );
+		}
+
+		.editor-inner-blocks {
 			padding: 0 60px;
 		}
 
-		.wp-block-media-text__media {
-			max-width: calc( 100% );
+		&.has-media-on-the-right .block-library-media-text__media-container {
+			margin-right: -60px;
+			margin-left: 60px;
 		}
+
+		&.has-media-on-the-right .editor-inner-blocks {
+			padding-right: 0;
+		}
+
+	}
+
+	p:first-child {
+		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
 	}
 
 	a,
