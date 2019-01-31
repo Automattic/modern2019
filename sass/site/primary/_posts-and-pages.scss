@@ -9,9 +9,7 @@
 	font-weight: bold;
 	line-height: 1;
 	padding: .25rem;
-	position: absolute;
 	text-transform: uppercase;
-	top: -$size__spacing-unit;
 	z-index: 1;
 }
 
@@ -60,6 +58,7 @@
 
 		color: $color__text-light;
 		font-weight: 500;
+		text-align: center;
 
 		> span {
 
@@ -101,7 +100,6 @@
 		@include media(tablet) {
 			margin: $size__spacing-unit auto calc(3 * #{$size__spacing-unit});
 			max-width: $size__site-tablet-content;
-			text-align: center;
 		}
 
 		@include media(desktop) {
@@ -190,11 +188,6 @@
 	.entry-content {
 		display: block;
 
-		> *:first-child,
-		> *.alignfull:first-child {
-			margin-top: 0;
-		}
-
 		p {
 			word-wrap: break-word;
 		}
@@ -279,11 +272,11 @@
 	@include postContentMaxWidth();
 
 	@include media(tablet) {
-		margin: calc(3 * #{$size__spacing-unit}) $size__site-margins;
+		margin: calc(3 * #{$size__spacing-unit}) auto;
 	}
 
 	@include media(desktop) {
-		margin: calc(3 * #{$size__spacing-unit}) $size__site-margins;
+		margin: calc(3 * #{$size__spacing-unit}) auto;
 	}
 
 	.author-title {

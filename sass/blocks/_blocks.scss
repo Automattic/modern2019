@@ -84,10 +84,12 @@
 
 		@include postContentMaxWidth();
 
+		/*
 		@include media(tablet) {
 			margin-left: 0;
 			margin-right: 0;
 		}
+		*/
 	}
 }
 
@@ -172,6 +174,18 @@
 	.wp-block-media-text {
 		margin: 0 auto;
 
+		a,
+		a:hover {
+			color: inherit;
+		}
+
+		h2,
+		h3,
+		h4 {
+			font-weight: 700;
+			text-align: left;
+		}
+
 		&:nth-child(odd) {
 			background-color: $color__background-media-text;
 			color: $color__text-media;
@@ -181,8 +195,36 @@
 			background-color: $color__background-media-text-alt;
 		}
 
+		&.has-media-on-the-right.is-stacked-on-mobile {
+			.wp-block-media-text__media {
+				grid-area: media-text-content;
+			}
+			.wp-block-media-text__content {
+				grid-area: media-text-media;
+			}
+		}
+
+		@include media(mobile) {
+			&.has-media-on-the-right.is-stacked-on-mobile {
+				.wp-block-media-text__media {
+					grid-area: media-text-media;
+				}
+				.wp-block-media-text__content {
+					grid-area: media-text-content;
+				}
+			}
+		}
+
 		@include media(tablet) {
 			padding: 60px 0;
+
+			:first-child {
+				margin-top: 0;
+			}
+
+			:last-child {
+				margin-bottom: 0;
+			}
 
 			.wp-block-media-text__media {
 				margin-left: -60px;
@@ -191,17 +233,13 @@
 			}
 
 			.wp-block-media-text__content {
-				padding: 0 60px;
+				padding: 0 60px 0 0;
 			}
 
 			&.alignfull {
 				margin-left: 60px;
-			}
-
-			&.alignfull.has-media-on-the-right {
-				margin-left: 0;
 				margin-right: 60px;
-				max-width: calc( 125% + 90px );
+				max-width: calc( 125% + 30px );
 			}
 
 			&.has-media-on-the-right .wp-block-media-text__media {
@@ -211,21 +249,8 @@
 
 			&.has-media-on-the-right .wp-block-media-text__content {
 				padding-right: 0;
+				padding-left: 60px;
 			}
-
-		}
-
-		p:first-child {
-			margin-top: 0;
-		}
-
-		p:last-child {
-			margin-bottom: 0;
-		}
-
-		a,
-		a:hover {
-			color: inherit;
 		}
 	}
 
@@ -585,6 +610,10 @@
 	.wp-block-image {
 		max-width: 100%;
 
+		@include media(tablet) {
+			max-width: calc(6 * (100vw / 12) - 28px);
+		}
+
 		img {
 			display: block;
 		}
@@ -639,7 +668,7 @@
 		.wp-block-cover-text {
 			font-family: $font__heading;
 			font-size: $font__size-xl;
-			font-weight: 200;
+			font-weight: 300;
 			line-height: 1.25;
 			padding: 0;
 			color: #fff;
@@ -737,7 +766,6 @@
 			&:before {
 				color: $color__text-light;
 				font-size: $font__size-lg;
-				padding-left: $font__size-sm;
 			}
 		}
 

@@ -77,7 +77,7 @@ h1 {
 .has-larger-font-size,
 h2 {
 	font-size: $font__size-md;
-	font-weight: 200;
+	font-weight: 300;
 	text-align: center;
 
 	@include media(tablet) {
@@ -89,7 +89,7 @@ h2 {
 .has-large-font-size,
 .comments-title,
 h3 {
-	font-size: $font__size-base;
+	font-size: $font__size-md;
 }
 
 .site-title,
@@ -102,7 +102,7 @@ h3 {
 h2.author-title,
 p.author-bio,
 h4 {
-	font-size: $font__size-md;
+	font-size: $font__size-base;
 }
 
 .pagination .nav-links,

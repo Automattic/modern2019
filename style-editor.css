@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-Modern (Twenty Nineteen) Editor Styles
+Modern Business Editor Styles
 */
 /** === Includes === */
 /*
@@ -78,6 +78,7 @@ body {
 
 p {
   font-size: 22px;
+  font-weight: 300;
 }
 
 h1,
@@ -88,6 +89,7 @@ h5,
 h6 {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 h1 {
@@ -112,11 +114,11 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 1.125em;
 }
 
 h4 {
-  font-size: 1.125em;
+  font-size: 22px;
 }
 
 h5 {
@@ -143,11 +145,6 @@ a:focus {
   text-decoration: underline;
 }
 
-/* This fixes the freeform/classic block links, but breaks custom colored links
-.wp-block-freeform.block-library-rich-text__tinymce a {
-	color: $color__link;
-}
-*/
 .has-primary-background-color,
 .has-secondary-background-color,
 .has-dark-gray-background-color,
@@ -214,6 +211,10 @@ figcaption,
 }
 
 /** === Post Title === */
+.editor-post-title__block {
+  margin-bottom: 0;
+}
+
 .editor-post-title__block:before {
   width: 2.8125em;
   margin-top: 0;
@@ -226,7 +227,7 @@ figcaption,
 .editor-post-title__block .editor-post-title__input {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 2.8125em;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -238,7 +239,7 @@ figcaption,
 
 /** === Heading === */
 .wp-block-heading strong {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 /** === Paragraph === */
@@ -246,7 +247,7 @@ figcaption,
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 3.375em;
   line-height: 1;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0 0.25em 0 0;
 }
 
@@ -264,7 +265,7 @@ figcaption,
 .wp-block-cover .wp-block-cover-text {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.6875em;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.4;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -272,7 +273,7 @@ figcaption,
 
 .wp-block-cover h2 strong,
 .wp-block-cover .wp-block-cover-text strong {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 768px) {
@@ -321,24 +322,6 @@ figcaption,
 }
 
 @media only screen and (min-width: 768px) {
-  .wp-block[data-type="core/cover"][data-align="wide"] h2,
-  .wp-block[data-type="core/cover"][data-align="wide"] .wp-block-cover-text,
-  .wp-block[data-type="core/cover"][data-align="full"] h2,
-  .wp-block[data-type="core/cover"][data-align="full"] .wp-block-cover-text {
-    max-width: calc(8 * (100vw / 12));
-  }
-}
-
-@media only screen and (min-width: 1168px) {
-  .wp-block[data-type="core/cover"][data-align="wide"] h2,
-  .wp-block[data-type="core/cover"][data-align="wide"] .wp-block-cover-text,
-  .wp-block[data-type="core/cover"][data-align="full"] h2,
-  .wp-block[data-type="core/cover"][data-align="full"] .wp-block-cover-text {
-    max-width: calc(6 * (100vw / 12));
-  }
-}
-
-@media only screen and (min-width: 768px) {
   .wp-block[data-type="core/cover"][data-align="full"] .wp-block-cover {
     padding-left: calc(10% + 64px);
     padding-right: calc(10% + 64px);
@@ -346,12 +329,23 @@ figcaption,
 }
 
 /* Media Text */
-.wp-block[data-type="core/media-text"]:nth-child(odd) {
+@media only screen and (min-width: 768px) {
+  .wp-block[data-type="core/media-text"] {
+    max-width: calc(6 * (100vw / 12) - 28px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wp-block[data-type="core/media-text"][data-align="wide"] {
+    max-width: 100%;
+  }
+}
+
+.wp-block[data-type="core/media-text"]:nth-child(odd) .wp-block-media-text {
   background-color: #181818;
   color: #fff;
 }
 
-.wp-block[data-type="core/media-text"]:nth-child(even) {
+.wp-block[data-type="core/media-text"]:nth-child(even) .wp-block-media-text {
   background-color: #f2f2f2;
 }
 
@@ -364,15 +358,37 @@ figcaption,
     margin-left: 0;
     margin-right: 0;
   }
+  .wp-block[data-type="core/media-text"] > .editor-block-list__block-edit {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 
 .wp-block-media-text {
   margin: 0;
 }
 
+.wp-block-media-text a,
+.wp-block-media-text a:hover {
+  color: inherit;
+}
+
+.wp-block-media-text h2,
+.wp-block-media-text h3,
+.wp-block-media-text h4 {
+  font-weight: 700;
+  text-align: left;
+}
+
 @media only screen and (min-width: 768px) {
   .wp-block-media-text {
     padding: 60px 0;
+  }
+  .wp-block-media-text :first-child {
+    margin-top: 0;
+  }
+  .wp-block-media-text :last-child {
+    margin-bottom: 0;
   }
   .wp-block-media-text .block-library-media-text__media-container {
     margin-left: -60px;
@@ -391,19 +407,6 @@ figcaption,
   }
 }
 
-.wp-block-media-text p:first-child {
-  margin-top: 0;
-}
-
-.wp-block-media-text p:last-child {
-  margin-bottom: 0;
-}
-
-.wp-block-media-text a,
-.wp-block-media-text a:hover {
-  color: inherit;
-}
-
 /** === Gallery === */
 .wp-block-gallery .blocks-gallery-image figcaption,
 .wp-block-gallery .blocks-gallery-item figcaption,
@@ -417,7 +420,7 @@ figcaption,
   line-height: 1.8;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.88889em;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link {
@@ -608,7 +611,7 @@ figcaption,
   display: table;
   line-height: 1.8;
   font-size: 0.88889em;
-  font-weight: bold;
+  font-weight: 700;
   background-color: #c43d80;
   border-radius: 5px;
 }
@@ -637,22 +640,28 @@ figcaption,
 
 /** === Separator === */
 .wp-block-separator {
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #686868;
+  border: 0;
+  height: 1px;
+  max-width: 5em;
+  text-align: left;
 }
 
-.wp-block-separator:not(.is-style-dots) {
-  border-bottom: 2px solid #686868;
+.wp-block-separator.is-style-wide {
+  max-width: 100%;
 }
 
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-  width: 2.25em;
+.wp-block-separator.is-style-dots {
+  max-width: 100%;
+  background-color: inherit;
+  border: inherit;
+  height: inherit;
+  text-align: center;
 }
 
 .wp-block-separator.is-style-dots:before {
   color: #686868;
   font-size: 1.6875em;
-  padding-left: calc(2 * 1rem);
 }
 
 /* Remove duplicate rule-line when a separator
@@ -683,7 +692,7 @@ ul.wp-block-archives li,
   color: #686868;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: calc(22px * 1.125);
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.2;
   padding-bottom: 0.75rem;
 }
@@ -751,11 +760,11 @@ ul.wp-block-archives li ul,
 /** === Latest Comments === */
 .wp-block-latest-comments .wp-block-latest-comments__comment-meta {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-meta .wp-block-latest-comments__comment-date {
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment,

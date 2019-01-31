@@ -1,5 +1,5 @@
 /*!
-Modern (Twenty Nineteen) Editor Styles
+Modern Business Editor Styles
 */
 
 /** === Includes === */
@@ -85,6 +85,7 @@ body {
 
 p {
 	font-size: $font__size_base;
+	font-weight: 300;
 }
 
 h1,
@@ -95,6 +96,7 @@ h5,
 h6 {
 	font-family: $font__heading;
 	font-weight: 700;
+	text-align: center;
 }
 
 h1 {
@@ -115,11 +117,11 @@ h2 {
 }
 
 h3 {
-	font-size: $font__size-base;
+	font-size: $font__size-md;
 }
 
 h4 {
-	font-size: $font__size-md;
+	font-size: $font__size-base;
 }
 
 h5 {
@@ -150,12 +152,6 @@ a {
 		text-decoration: underline;
 	}
 }
-
-/* This fixes the freeform/classic block links, but breaks custom colored links
-.wp-block-freeform.block-library-rich-text__tinymce a {
-	color: $color__link;
-}
-*/
 
 // Use white text against these backgrounds by default.
 .has-primary-background-color,
@@ -203,6 +199,7 @@ figcaption,
 /** === Post Title === */
 
 .editor-post-title__block {
+	margin-bottom: 0;
 
 	&:before {
 		width: $font__size-xxl;
@@ -216,7 +213,7 @@ figcaption,
 	.editor-post-title__input {
 		font-family: $font__heading;
 		font-size: $font__size-xxl;
-		font-weight: 200;
+		font-weight: 300;
 		text-align: center;
 	}
 }
@@ -232,7 +229,7 @@ figcaption,
 
 .wp-block-heading {
 	strong {
-		font-weight: bolder;
+		font-weight: 700;
 	}
 }
 
@@ -244,7 +241,7 @@ figcaption,
 		font-family: $font__heading;
 		font-size: $font__size-xxxl;
 		line-height: 1;
-		font-weight: bold;
+		font-weight: 700;
 		margin: 0 0.25em 0 0;
 	}
 }
@@ -264,13 +261,13 @@ figcaption,
 	.wp-block-cover-text {
 		font-family: $font__heading;
 		font-size: $font__size-lg;
-		font-weight: 200;
+		font-weight: 300;
 		line-height: 1.4;
 		padding-left: $size__spacing-unit;
 		padding-right: $size__spacing-unit;
 
 		strong {
-			font-weight: bolder;
+			font-weight: 700;
 		}
 
 		@include media(tablet) {
@@ -314,26 +311,6 @@ figcaption,
 	}
 }
 
-.wp-block[data-type="core/cover"][data-align="wide"],
-.wp-block[data-type="core/cover"][data-align="full"] {
-
-	@include media(tablet) {
-
-		h2,
-		.wp-block-cover-text {
-			max-width: calc(8 * (100vw / 12));
-		}
-	}
-
-	@include media(desktop) {
-
-		h2,
-		.wp-block-cover-text {
-			max-width: calc(6 * (100vw / 12));
-		}
-	}
-}
-
 .wp-block[data-type="core/cover"][data-align="full"] {
 
 	@include media(tablet) {
@@ -347,12 +324,22 @@ figcaption,
 
 /* Media Text */
 .wp-block[data-type="core/media-text"] {
-	&:nth-child(odd) {
+	@include media(tablet) {
+		max-width: calc(6 * (100vw / 12) - 28px);
+		margin-left: auto;
+		margin-right: auto;
+
+		&[data-align="wide"] {
+			max-width: 100%;
+		}
+	}
+
+	&:nth-child(odd) .wp-block-media-text {
 		background-color: $color__background-media-text;
 		color: $color__text-media;
 	}
 
-	&:nth-child(even) {
+	&:nth-child(even) .wp-block-media-text {
 		background-color: $color__background-media-text-alt;
 	}
 
@@ -366,6 +353,11 @@ figcaption,
 			margin-left: 0;
 			margin-right: 0;
 		}
+
+		& > .editor-block-list__block-edit {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
 	}
 
 }
@@ -373,8 +365,28 @@ figcaption,
 .wp-block-media-text {
 	margin: 0;
 
+	a,
+	a:hover {
+		color: inherit;
+	}
+
+	h2,
+	h3,
+	h4 {
+		font-weight: 700;
+		text-align: left;
+	}
+
 	@include media(tablet) {
 		padding: 60px 0;
+
+		:first-child {
+			margin-top: 0;
+		}
+
+		:last-child {
+			margin-bottom: 0;
+		}
 
 		.block-library-media-text__media-container {
 			margin-left: -60px;
@@ -395,19 +407,6 @@ figcaption,
 			padding-right: 0;
 		}
 
-	}
-
-	p:first-child {
-		margin-top: 0;
-	}
-
-	p:last-child {
-		margin-bottom: 0;
-	}
-
-	a,
-	a:hover {
-		color: inherit;
 	}
 }
 
@@ -432,7 +431,7 @@ figcaption,
 		line-height: 1.8;
 		font-family: $font__heading;
 		font-size: $font__size-sm;
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 	&:not(.is-style-outline) .wp-block-button__link {
@@ -621,7 +620,7 @@ figcaption,
 		display: table;
 		line-height: 1.8;
 		font-size: $font__size-sm;
-		font-weight: bold;
+		font-weight: 700;
 		background-color: $color__link;
 		border-radius: 5px;
 	}
@@ -659,22 +658,29 @@ figcaption,
 /** === Separator === */
 
 .wp-block-separator {
-	margin-left: auto;
-	margin-right: auto;
+	background-color: $color__text-light;
+	border: 0;
+	height: 1px;
+	max-width: 5em;
+	text-align: left;
 
-	&:not(.is-style-dots) {
-		border-bottom: 2px solid $color__text-light;
+	&.is-style-wide {
+		max-width: 100%;
 	}
 
-	&:not(.is-style-wide):not(.is-style-dots) {
-		width: $font__size-xl;
+	&.is-style-dots {
+		max-width: 100%;
+		background-color: inherit;
+		border: inherit;
+		height: inherit;
+		text-align: center;
+
+		&:before {
+			color: $color__text-light;
+			font-size: $font__size-lg;
+		}
 	}
 
-	&.is-style-dots:before {
-		color: $color__text-light;
-		font-size: $font__size-lg;
-		padding-left: calc(2 * #{$size__spacing-unit});
-	}
 }
 
 /* Remove duplicate rule-line when a separator
@@ -701,7 +707,7 @@ ul.wp-block-archives,
 		color: $color__text-light;
 		font-family: $font__heading;
 		font-size: calc(#{$font__size_base} * #{$font__size-ratio});
-		font-weight: bold;
+		font-weight: 700;
 		line-height: $font__line-height-heading;
 		padding-bottom: ( .75 * $size__spacing-unit );
 
@@ -761,10 +767,10 @@ ul.wp-block-archives,
 
 	.wp-block-latest-comments__comment-meta {
 		font-family: $font__heading;
-		font-weight: bold;
+		font-weight: 700;
 
 		.wp-block-latest-comments__comment-date {
-			font-weight: normal;
+			font-weight: 400;
 		}
 	}
 

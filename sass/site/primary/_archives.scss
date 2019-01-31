@@ -3,6 +3,7 @@
 .error404 .page-header {
 
 	margin: $size__spacing-unit $size__spacing-unit calc(3 * #{$size__spacing-unit});
+	text-align: center;
 
 	@include media(tablet) {
 		margin: 0 $size__site-margins $size__site-margins;
